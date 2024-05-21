@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react'
 
 function App() {
-  const [backendData, setBackendData] = useState([{}])
+  const [backendData, setBackendData] = useState([{}]) // used to store the json data during fetching for our api
 
-  useEffect(() => { // using the useEffect so that
+  useEffect(() => { // using the useEffect so that we can fetch the api
     fetch("/api").then(
       response => response.json()
     ).then(
